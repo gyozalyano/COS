@@ -15,31 +15,31 @@ public class DbInitializer
         if (!context.DinnerOptions.Any())
         {
             context.AddRange
-            (
-                new Dinner
-                {
-                    Name = "Dolma Jan",
-                    Description = "The ultimate cabbage rolls filled with meet, rice and herbs",
-                    Category = Categories["Standard"],
-                    ImageUrl =
-                        "https://photos.app.goo.gl/Mk52ikrhcZc8KbFX9",
-                    ImageThumbnailUrl =
-                        "https://photos.app.goo.gl/Mk52ikrhcZc8KbFX9",
-                    AllergyInformation = ""
-                },
+                (
+                    new Dinner
+                    {
+                        Name = "Dolma Jan",
+                        Description = "The ultimate cabbage rolls filled with meet, rice and herbs",
+                        Category = Categories["Standard"],
+                        ImageUrl =
+                            "https://photos.app.goo.gl/Mk52ikrhcZc8KbFX9",
+                        ImageThumbnailUrl =
+                            "https://photos.app.goo.gl/Mk52ikrhcZc8KbFX9",
+                        AllergyInformation = ""
+                    },
 
-                new Dinner
-                {
-                    Name = "Pizza",
-                    Description = "The ultimate cabbage rolls filled with meet, rice and herbs",
-                    Category = Categories["Standard"],
-                    ImageUrl =
-                        "https://photos.app.goo.gl/Mk52ikrhcZc8KbFX9",
-                    ImageThumbnailUrl =
-                        "https://photos.app.goo.gl/Mk52ikrhcZc8KbFX9",
-                    AllergyInformation = ""
-                }
-            );
+                    new Dinner
+                    {
+                        Name = "Pizza",
+                        Description = "The ultimate cabbage rolls filled with meet, rice and herbs",
+                        Category = Categories["Standard"],
+                        ImageUrl =
+                            "https://photos.app.goo.gl/Mk52ikrhcZc8KbFX9",
+                        ImageThumbnailUrl =
+                            "https://photos.app.goo.gl/Mk52ikrhcZc8KbFX9",
+                        AllergyInformation = ""
+                    }
+                );
         }
 
         context.SaveChanges();

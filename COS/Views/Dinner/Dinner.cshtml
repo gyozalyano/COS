@@ -1,4 +1,4 @@
-﻿@model COS.ViewModels.DinnerOptionsViewModel
+﻿@model DinnerOptionsViewModel
 
 <h1>@Model.CurrentCategory</h1>
 
@@ -7,7 +7,7 @@
     @foreach (var dinner in Model.DinnerOptions)
     {
         <div class="col">
-            <div class="card pie-card">
+            <div class="pie-card">
                 <img src="@dinner.ImageThumbnailUrl" class="card-img-top" alt="@dinner.Name">
                 <div class="card-body pie-button">
                     <h4 class="d-grid">
@@ -15,7 +15,7 @@
 
                     <div class="d-flex justify-content-between mt-2">
                         <h2 class="text-start">
-                            <a class="pie-link">@dinner.Name</a>
+                            <a class="text-primary">@dinner.Name</a>
                         </h2>
                     </div>
                 </div>
