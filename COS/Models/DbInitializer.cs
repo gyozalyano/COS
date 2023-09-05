@@ -12,19 +12,24 @@ public class DbInitializer
             context.Categories.AddRange(Categories.Select(c => c.Value));
         }
 
+        if (context.Categories.Any())
+        {
+            context.RemoveRange();
+        }
+
         if (!context.DinnerOptions.Any())
         {
             context.AddRange
                 (
                     new Dinner
                     {
-                        Name = "Dolma Jan",
+                        Name = "Dolma Jan2",
                         Description = "The ultimate cabbage rolls filled with meet, rice and herbs",
                         Category = Categories["Standard"],
                         ImageUrl =
-                            "https://photos.app.goo.gl/Mk52ikrhcZc8KbFX9",
+                            "https://i.imgur.com/GLR0JI5.jpg",
                         ImageThumbnailUrl =
-                            "https://photos.app.goo.gl/Mk52ikrhcZc8KbFX9",
+                            "https://i.imgur.com/GLR0JI5.jpg",
                         AllergyInformation = ""
                     },
 
