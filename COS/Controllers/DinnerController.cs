@@ -17,7 +17,7 @@ public class DinnerController : Controller
 
     public IActionResult Dinner()
     {
-        var dinnerViewModel = new DinnerOptionsViewModel(_dinnerRepository.AllDinnerOptions, "Standard");
+        var dinnerViewModel = new DinnerOptionsViewModel(_dinnerRepository.AllDinnerOptions, "Standard Menu");
         return View(dinnerViewModel);
     }
 }

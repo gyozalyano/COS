@@ -1,4 +1,6 @@
-﻿namespace COS.Models;
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace COS.Models;
 
 public class DbInitializer
 {
@@ -12,9 +14,10 @@ public class DbInitializer
             context.Categories.AddRange(Categories.Select(c => c.Value));
         }
 
-        if (context.Categories.Any())
+        if (context.DinnerOptions.Any())
         {
-            context.RemoveRange();
+            context.DinnerOptions.ExecuteDelete();
+            context.SaveChanges();
         }
 
         if (!context.DinnerOptions.Any())
@@ -23,27 +26,63 @@ public class DbInitializer
                 (
                     new Dinner
                     {
-                        Name = "Dolma Jan2",
+                        Name = "Dolma",
                         Description = "The ultimate cabbage rolls filled with meet, rice and herbs",
                         Category = Categories["Standard"],
                         ImageUrl =
-                            "https://i.imgur.com/GLR0JI5.jpg",
-                        ImageThumbnailUrl =
-                            "https://i.imgur.com/GLR0JI5.jpg",
+                            "https://i.imgur.com/7JbWpS8.jpg",
                         AllergyInformation = ""
                     },
 
                     new Dinner
                     {
-                        Name = "Pizza",
-                        Description = "The ultimate cabbage rolls filled with meet, rice and herbs",
+                        Name = "Risotto",
+                        Description = "Risotto rice cooked with chorizo and a variety of vegetables.",
                         Category = Categories["Standard"],
                         ImageUrl =
-                            "https://photos.app.goo.gl/Mk52ikrhcZc8KbFX9",
-                        ImageThumbnailUrl =
-                            "https://photos.app.goo.gl/Mk52ikrhcZc8KbFX9",
+                            "https://i.imgur.com/gmMqTVz.jpg",
+                        AllergyInformation = ""
+                    },
+
+                    new Dinner
+                    {
+                        Name = "Baked Gnocchi",
+                        Description = "Fresh gnocchi baked with chorizo, peppers, spinach, sun-dried tomatoes and cheese.",
+                        Category = Categories["Standard"],
+                        ImageUrl =
+                            "https://i.imgur.com/hd4vuMm.jpg",
+                        AllergyInformation = " "
+                    },
+
+                    new Dinner
+                    {
+                        Name = "Lasagna",
+                        Description = "Fresh lasagna sheets with outdoor breed beef mince and a variety of vegetables.",
+                        Category = Categories["Standard"],
+                        ImageUrl =
+                            "https://i.imgur.com/eKlZ6LO.jpg",
                         AllergyInformation = ""
                     }
+
+                    //new Dinner
+                    //{
+                    //    Name = "Risotto",
+                    //    Description = "",
+                    //    Category = Categories["Standard"],
+                    //    ImageUrl =
+                    //        "https://i.imgur.com/gmMqTVz.jpg",
+                    //    AllergyInformation = ""
+                    //},
+
+                    //new Dinner
+                    //{
+                    //    Name = "Risotto",
+                    //    Description = "",
+                    //    Category = Categories["Standard"],
+                    //    ImageUrl =
+                    //        "https://i.imgur.com/gmMqTVz.jpg",
+                    //    AllergyInformation = ""
+                    //}
                 );
         }
 

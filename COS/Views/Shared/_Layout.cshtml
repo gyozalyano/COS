@@ -4,20 +4,23 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>COS</title>
-    <link href='https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
-    <script src="/lib/jquery/jquery.js"></script>
-    <script src="/lib/bootstrap/js/bootstrap.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Work+Sans' rel='stylesheet' type='text/css'>
+    <script src="~/lib/jquery/jquery.js"></script>
+    <script src="~/lib/bootstrap/js/bootstrap.js"></script>
+    <link href="~/css/site.css" rel="stylesheet" />
     <base href="/" />
 </head>
 <body>
-    <div class="container-fluid">
+    <div class="container">
         <header>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light"
-                 aria-label="Bethany's Pie Shop navigation header">
-                <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-light"
+                 aria-label="COS navigation header">
+                <div class="container-xl">
                     <a class="navbar-brand" asp-controller="Home" asp-action="Index">
-                        <img src="Images/FOSlogo.png" width="150" height="100" alt="Logo">
+                        <img src="images/FOSlogo.png" width="151" height="70" class="d-inline-block align-top mb-2 mt-1"
+                             alt="COS Logo">
                     </a>
+
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                             aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -25,6 +28,12 @@
 
                     <div class="collapse navbar-collapse" id="navbarCollapse">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                             <li class="nav-item">
+                                <a asp-controller="Home" asp-action="Index" class="nav-link text-purple">Home</a>
+                            </li>
+                             <li class="nav-item">
+                                <a asp-controller="Dinner Options" asp-action="List" class="nav-link text-purple">Dinner Options</a>
+                            </li>
                         </ul>
                     </div>
                 </div>

@@ -1,21 +1,24 @@
 ﻿@model DinnerOptionsViewModel
 
-<h1>@Model.CurrentCategory</h1>
+<div>
+    <h1> @Model.CurrentCategory</h1>
+</div>
 
 <div class="row row-cols-1 row-cols-md-3 g-4">
 
     @foreach (var dinner in Model.DinnerOptions)
     {
         <div class="col">
-            <div class="pie-card">
-                <img src="@dinner.ImageThumbnailUrl" class="card-img-top" alt="@dinner.Name">
-                <div class="card-body pie-button">
+            <div class="active">
+                <img src="@dinner.ImageUrl" class="card-img-top" alt="@dinner.Name " weight="2" height="300">
+                <div class="card-body">
                     <h4 class="d-grid">
                     </h4>
 
                     <div class="d-flex justify-content-between mt-2">
                         <h2 class="text-start">
-                            <a class="text-bg-dark"> @dinner.Name </a>
+                            <a class="text-body-emphasis"> @dinner.Name </a>
+                            <p class = "text-sm-start"> @dinner.Description</p>
                         </h2>
                     </div>
                 </div>
