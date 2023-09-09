@@ -20,4 +20,12 @@ public class DinnerController : Controller
         var dinnerViewModel = new DinnerOptionsViewModel(_dinnerRepository.AllDinnerOptions, "Standard Menu");
         return View(dinnerViewModel);
     }
+
+    public IActionResult Details(int id)
+    {
+        var dinner = _dinnerRepository.GetDinnerById(id);
+        if (dinner == null)
+            return NotFound();
+        return View(dinner);
+    }
 }

@@ -23,67 +23,62 @@ public class DbInitializer
         if (!context.DinnerOptions.Any())
         {
             context.AddRange
-                (
-                    new Dinner
-                    {
-                        Name = "Dolma",
-                        Description = "The ultimate cabbage rolls filled with meet, rice and herbs",
-                        Category = Categories["Standard"],
-                        ImageUrl =
-                            "https://i.imgur.com/7JbWpS8.jpg",
-                        AllergyInformation = ""
-                    },
+            (
+                new Dinner
+                {
+                    Name = "Dolma",
+                    Description = "The ultimate cabbage rolls filled with meet, rice and herbs.",
+                    Category = Categories["Standard"],
+                    ImageUrl = "https://i.imgur.com/7JbWpS8.jpg",
+                    AllergyInformation = ""
+                },
 
-                    new Dinner
-                    {
-                        Name = "Risotto",
-                        Description = "Risotto rice cooked with chorizo and a variety of vegetables.",
-                        Category = Categories["Standard"],
-                        ImageUrl =
-                            "https://i.imgur.com/gmMqTVz.jpg",
-                        AllergyInformation = ""
-                    },
+                new Dinner
+                {
+                    Name = "Risotto",
+                    Description = "Risotto rice cooked with chorizo and a variety of vegetables.",
+                    Category = Categories["Standard"],
+                    ImageUrl = "https://i.imgur.com/gmMqTVz.jpg",
+                    AllergyInformation = ""
+                },
 
-                    new Dinner
-                    {
-                        Name = "Baked Gnocchi",
-                        Description = "Fresh gnocchi baked with chorizo, peppers, spinach, sun-dried tomatoes and cheese.",
-                        Category = Categories["Standard"],
-                        ImageUrl =
-                            "https://i.imgur.com/hd4vuMm.jpg",
-                        AllergyInformation = " "
-                    },
+                new Dinner
+                {
+                    Name = "Baked Gnocchi",
+                    Description = "Fresh gnocchi baked with chorizo, peppers, spinach, sun-dried tomatoes and cheese.",
+                    Category = Categories["Standard"],
+                    ImageUrl = "https://i.imgur.com/hd4vuMm.jpg",
+                    AllergyInformation = " "
+                },
 
-                    new Dinner
-                    {
-                        Name = "Lasagna",
-                        Description = "Fresh lasagna sheets with outdoor breed beef mince and a variety of vegetables.",
-                        Category = Categories["Standard"],
-                        ImageUrl =
-                            "https://i.imgur.com/eKlZ6LO.jpg",
-                        AllergyInformation = ""
-                    }
+                new Dinner
+                {
+                    Name = "Lasagna",
+                    Description = "Fresh lasagna sheets with outdoor breed beef mince and a variety of vegetables.",
+                    Category = Categories["Standard"],
+                    ImageUrl = "https://i.imgur.com/eKlZ6LO.jpg",
+                    AllergyInformation = ""
+                }
 
-                    //new Dinner
-                    //{
-                    //    Name = "Risotto",
-                    //    Description = "",
-                    //    Category = Categories["Standard"],
-                    //    ImageUrl =
-                    //        "https://i.imgur.com/gmMqTVz.jpg",
-                    //    AllergyInformation = ""
-                    //},
+                //new Dinner
+                //{
+                //    Name = "Risotto",
+                //    Description = "",
+                //    Category = Categories["Standard"],
+                //    ImageUrl = "https://i.imgur.com/gmMqTVz.jpg",
+                //    AllergyInformation = ""
+                //},
 
-                    //new Dinner
-                    //{
-                    //    Name = "Risotto",
-                    //    Description = "",
-                    //    Category = Categories["Standard"],
-                    //    ImageUrl =
-                    //        "https://i.imgur.com/gmMqTVz.jpg",
-                    //    AllergyInformation = ""
-                    //}
-                );
+                //new Dinner
+                //{
+                //    Name = "Risotto",
+                //    Description = "",
+                //    Category = Categories["Standard"],
+                //    ImageUrl =
+                //        "https://i.imgur.com/gmMqTVz.jpg",
+                //    AllergyInformation = ""
+                //}
+            );
         }
 
         context.SaveChanges();

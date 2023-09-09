@@ -1,25 +1,29 @@
 ﻿@model DinnerOptionsViewModel
 
-<div>
-    <h1> @Model.CurrentCategory</h1>
-</div>
 
-<div class="row row-cols-1 row-cols-md-3 g-4">
+<h2 class="my-sm-4 text-purple"> @Model.CurrentCategory</h2>
+
+<div class="row row-cols-1 row-cols-md-4 g-4">
 
     @foreach (var dinner in Model.DinnerOptions)
     {
         <div class="col">
             <div class="active">
-                <img src="@dinner.ImageUrl" class="card-img-top" alt="@dinner.Name " weight="2" height="300">
+                <img src="@dinner.ImageUrl" class="card-img-top" alt="@dinner.Name"height="300">
                 <div class="card-body">
                     <h4 class="d-grid">
                     </h4>
 
                     <div class="d-flex justify-content-between mt-2">
-                        <h2 class="text-start">
-                            <a class="text-body-emphasis"> @dinner.Name </a>
-                            <p class = "text-sm-start"> @dinner.Description</p>
-                        </h2>
+                        <h1 class="text-start">
+                            <a class="text-sm-start fs-4"
+                               asp-controller="Dinner"
+                               asp-action="Details"
+                               asp-route-Id=@dinner.DinnerId>
+                                 @dinner.Name
+                            </a>
+                                <p class = "text-sm-start fs-5"> @dinner.Description</p>
+                        </h1>
                     </div>
                 </div>
             </div>
